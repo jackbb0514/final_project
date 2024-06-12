@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <style>
+        /* Additional CSS for the floating window */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="all">
+            <div class="top">
+                <div></div>
+                <div class="comment"><a href="comment.html">留言板</a></div>
+                <div class="comsumerin"><a href="#" onclick="showFloatingWindow()">會員/登入</a></div>
+                <div class="shoppingcar"><a href="cart.html">購物車</a></div>
+            </div>
+            <div class="middle">
+                <div class="pc1"><img src="img/logo.png"></div>
+                <div class="name"><img src="img/name.png"></div>
+                <div class="find">
+                    <input type="text" value="搜尋" onfocus="clearText(this)" onblur="restoreText(this)">
+                    <button onclick="search()">搜尋</button>
+                </div>
+            </div>
+            <div class="goods">
+                <div class="kuromi"><a href="commoditylist/Sanrio.html">三麗鷗</a></div>
+                <div class="house"><a href="#item2">間諜過家家</a></div>
+                <div class="holi"><a href="#item3">哈利波特</a></div>
+                <div class="kapi"><a href="#item4">卡皮巴拉</a></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Floating window for login -->
+    <div id="floatingWindowLogin" class="floating-window" style="display: none;">
+        <div class="floating-window-content" id="loginWindow">
+            <span class="close" onclick="closeFloatingWindow()">&times;</span>
+            <h2>登入</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+                </div>
+                <div class="remeber-forget">
+                    <label><input type="checkbox">記住我的帳密</label>
+
+                </div>
+                <input class="btn" type="submit" value="登入"
+                    onclick="location.href='../MainPage Logged in/MainPage.html'">
+                <div class="login-register">
+                    <p>沒有帳號?<a href="#" onclick="showRegisterWindow()">註冊</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating window for registration -->
+    <div id="floatingWindowRegister" class="floating-window" style="display: none;">
+        <div class="floating-window-content" id="registerWindow">
+            <span class="close" onclick="closeFloatingWindow()">&times;</span>
+            <h2>註冊</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" placeholder="確認密碼" onfocus="this.style.color='#ffff'" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" placeholder="電話" onfocus="this.style.color='#ffff'" required>
+                </div>
+                <input class="btn" type="submit" value="註冊" onclick="registerUser()">
+            </form>
+        </div>
+    </div>
+
+
+    <main>
+
+
+        <!-- 第一列 -->
+    <div class="border">
+        <div class="procontainer">
+          <!-- location內 填入商品頁面檔案名稱 -->
+          <div class="product" onclick="location='productlist/product1.html'">
+            <img src="img/1.jpg" />
+            <div id="proName">Product name</div>
+            <div>Description</div>
+            <div class="priceposi">$100</div>
+          </div>
+  
+          <div class="product" onclick="location='productlist/product2.html'">
+            <img src="img/2.png" />
+            <div id="proName">Product name</div>
+            <div>Description</div>
+            <div class="priceposi">$100</div>
+          </div>
+  
+          <div class="product" onclick="location='productlist/product3.html'">
+            <img src="img/3.jpg" />
+            <div id="proName">Product name</div>
+            <div>Description</div>
+            <div class="priceposi">$100</div>
+          </div>
+  
+          <div class="product" onclick="location='productlist/product4.html'">
+            <img src="img/4.jpg" />
+            <div id="proName">Product name</div>
+            <div>Description</div>
+            <div class="priceposi">$100</div>
+          </div>
+        </div>
+    </div>
+
+
+
+<!-- 第二列 -->
+<div class="border">
+    <div class="procontainer">
+      <!-- location內 填入商品頁面檔案名稱 -->
+      <div class="product" onclick="location='productlist/product1.html'">
+        <img src="img/1.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product2.html'">
+        <img src="img/2.png" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product3.html'">
+        <img src="img/3.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product4.html'">
+        <img src="img/4.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+    </div>
+</div>
+
+<!-- 第三列 -->
+<div class="border">
+    <div class="procontainer">
+      <!-- location內 填入商品頁面檔案名稱 -->
+      <div class="product" onclick="location='productlist/product1.html'">
+        <img src="img/1.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product2.html'">
+        <img src="img/2.png" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product3.html'">
+        <img src="img/3.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product4.html'">
+        <img src="img/4.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+    </div>
+</div>
+
+<!-- 第四列 -->
+<div class="border">
+    <div class="procontainer">
+      <!-- location內 填入商品頁面檔案名稱 -->
+      <div class="product" onclick="location='productlist/product1.html'">
+        <img src="img/1.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product2.html'">
+        <img src="img/2.png" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product3.html'">
+        <img src="img/3.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+
+      <div class="product" onclick="location='productlist/product4.html'">
+        <img src="img/4.jpg" />
+        <div id="proName">Product name</div>
+        <div>Description</div>
+        <div class="priceposi">$100</div>
+      </div>
+    </div>
+</div>
+
+
+  <!-- 關於我們 -->
+
+  <div class="container">
+    <div class="row">
+        <div class="profile-card">
+            <img src="img/test.jpg" alt="test" class="profile-image">
+            <div class="profile-info">
+                <p>莫銘海</p>
+                <p>内容</p>
+                <p>聯絡資訊</p>
+                <a href="https://line.me/tw/"><img class="icon" src="img/line.png" alt=""></a>
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="icon" src="img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="icon" src="img/instagram.png" alt=""></a>
+            </div>
+        </div>
+        <div class="profile-card">
+            <img src="img/test.jpg" alt="test" class="profile-image">
+            <div class="profile-info">
+                <p>莫銘海</p>
+                <p>内容</p>
+                <p>聯絡資訊</p>
+                <a href="https://line.me/tw/"><img class="icon" src="img/line.png" alt=""></a>
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="icon" src="img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="icon" src="img/instagram.png" alt=""></a>
+            </div>
+        </div>
+        <div class="profile-card">
+            <img src="img/test.jpg" alt="test" class="profile-image">
+            <div class="profile-info">
+                <p>莫銘海</p>
+                <p>内容</p>
+                <p>聯絡資訊</p>
+                <a href="https://line.me/tw/"><img class="icon" src="img/line.png" alt=""></a>
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="icon" src="img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="icon" src="img/instagram.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="row row-center">
+        <div class="profile-card">
+            <img src="img/test.jpg" alt="test" class="profile-image">
+            <div class="profile-info">
+                <p>莫銘海</p>
+                <p>内容</p>
+                <p>聯絡資訊</p>
+                <a href="https://line.me/tw/"><img class="icon" src="img/line.png" alt=""></a>
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="icon" src="img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="icon" src="img/instagram.png" alt=""></a>
+            </div>
+        </div>
+        <div class="profile-card">
+            <img src="img/test.jpg" alt="test" class="profile-image">
+            <div class="profile-info">
+                <p>莫銘海</p>
+                <p>内容</p>
+                <p>聯絡資訊</p>
+                <a href="https://line.me/tw/"><img class="icon" src="img/line.png" alt=""></a>
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="icon" src="img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="icon" src="img/instagram.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+
+
+
+
+    <!-- JavaScript for toggling the floating windows -->
+    <script>
+        function showFloatingWindow() {
+            var floatingWindow = document.getElementById("floatingWindowLogin");
+            floatingWindow.style.display = "block";
+        }
+
+        function closeFloatingWindow() {
+            var floatingWindow = document.getElementById("floatingWindowLogin");
+            floatingWindow.style.display = "none";
+        }
+
+        function showRegisterWindow() {
+            var floatingWindow = document.getElementById("floatingWindowRegister");
+            floatingWindow.style.display = "block";
+        }
+
+        function registerUser() {
+            // Hide the login window
+            var loginWindow = document.getElementById("floatingWindowLogin");
+            loginWindow.style.display = "none";
+
+            // Show the registration window
+            var registerWindow = document.getElementById("floatingWindowRegister");
+            registerWindow.style.display = "block";
+        }
+        function clearText(input) {
+        if (input.value === '搜尋') {
+            input.value = '';
+        }
+    }
+
+    function restoreText(input) {
+        if (input.value === '') {
+            input.value = '搜尋';
+        }
+    }
+    function search() {
+            var input = document.getElementById("searchInput").value;
+            alert("You searched for: " + input);
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+<footer>
+    <h5>@2024 多媒體 Final Exam</h5>
+</footer>
+
+</html>

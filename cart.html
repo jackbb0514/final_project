@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">首頁</a>
+        /
+        <a href="cart.html">購物車</a>
+        /
+        <a href="purchase_history.html">購買記錄</a>
+        /
+        <a href="comment.html">評論區</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>購物車清單</h1>
+    <table id="cart">
+        <thead>
+            <tr>
+                <th>選擇</th>
+                <th>商品圖片</th>
+                <th>商品內容</th>
+                <th>單價</th>
+                <th>總價</th>
+                <th>數量</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 購物車項目將通過JavaScript動態插入 -->
+        </tbody>
+    </table>
+    <div class="total">
+        <strong>總計: $<span id="total-price">0.00</span></strong>
+    </div>
+    <button class="btn" onclick="checkout()">結算</button>
+</div>
+
+
+
+
+
+
+<script>
+    let cartItems = [
+        { name: '商品A', description: '商品A描述', imageUrl: 'img/test.jpg', quantity: 1, price: 100.00, totalPrice: 100.00, selected: false },
+        { name: '商品B', description: '商品B描述', imageUrl: 'img/test.jpg', quantity: 1, price: 200.00, totalPrice: 200.00, selected: false }
+    ];
+
+    function updateQuantity(name, quantity) {
+        const item = cartItems.find(item => item.name === name);
+        if (item) {
+            item.quantity = parseInt(quantity);
+            item.totalPrice = item.quantity * item.price;
+        }
+        renderCart();
+    }
+
+    function toggleSelection(name, selected) {
+        const item = cartItems.find(item => item.name === name);
+        if (item) {
+            item.selected = selected;
+        }
+    }
+
+    function removeItem(name) {
+        cartItems = cartItems.filter(item => item.name !== name);
+        renderCart();
+    }
+
+    function increaseQuantity(name) {
+        const item = cartItems.find(item => item.name === name);
+        if (item) {
+            item.quantity += 1;
+            item.totalPrice = item.quantity * item.price;
+            renderCart();
+        }
+    }
+
+    function decreaseQuantity(name) {
+        const item = cartItems.find(item => item.name === name);
+        if (item && item.quantity > 1) {
+            item.quantity -= 1;
+            item.totalPrice = item.quantity * item.price;
+            renderCart();
+        }
+    }
+
+    function renderCart() {
+        const cartBody = document.querySelector('#cart tbody');
+        cartBody.innerHTML = '';
+        let totalPrice = 0;
+
+        cartItems.forEach(item => {
+            const row = document.createElement('tr');
+
+
+            // 添加圖片
+            row.innerHTML = `
+                <td><input type="checkbox" onchange="toggleSelection('${item.name}', this.checked)" ${item.selected ? 'checked' : ''}></td>
+                <td><img src="${item.imageUrl}" alt="${item.name}" width="50" height="50"></td>
+                <td>${item.description}</td>
+                <td>$${item.price.toFixed(2)}</td>
+                <td>$${item.totalPrice.toFixed(2)}</td>
+                <td>
+                    <div class="quantity-controls">
+                        <button class="btn btn-quantity" onclick="decreaseQuantity('${item.name}')">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="btn btn-quantity" onclick="increaseQuantity('${item.name}')">+</button>
+                        <button class="btn btn-remove" onclick="removeItem('${item.name}')">刪除</button>
+                    </div>
+                </td>
+            `;
+            cartBody.appendChild(row);
+            if (item.selected) {
+                totalPrice += item.totalPrice;
+            }
+        });
+
+        document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+    }
+
+    function checkout() {
+        const selectedItems = cartItems.filter(item => item.selected);
+        if (selectedItems.length === 0) {
+            alert('請選擇至少一個商品進行結算');
+            return;
+        }
+
+        let message = '你選擇了以下商品進行結算：\n';
+        selectedItems.forEach(item => {
+            message += `${item.name} - 數量: ${item.quantity}, 總價: $${item.totalPrice.toFixed(2)}\n`;
+        });
+        message += `總計: $${selectedItems.reduce((total, item) => total + item.totalPrice, 0).toFixed(2)}`;
+
+        alert(message);
+    }
+
+    // 初始化顯示購物車
+    renderCart();
+</script>
+
+</body>
+</html>

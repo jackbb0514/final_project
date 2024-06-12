@@ -1,0 +1,71 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    line-height: 1.5;
+    /*行距*/
+}
+
+header,
+main,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: gainsboro;
+    flex-grow: 1;
+    width: 100%;
+}
+
+main {
+    background-color: #f4a7b9;
+    flex-grow: 5;
+    width: 100vw;
+    padding: 10px;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    /*rem：相對單位，每個元素透過「倍數」乘以根元素的 px 值。*/
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #cdcdcd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fedfe1;
+}
+tbody tr:nth-child(odd){
+    background-color: white;
+}
+
+footer {
+    background-color: aquamarine;
+    flex-grow: 2;
+    width: 100%;
+    text-align: center;
+}
+

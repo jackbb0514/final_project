@@ -1,0 +1,125 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    line-height: 1.5;
+    /*行距*/
+}
+
+header,
+main,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: gainsboro;
+    flex-grow: 1;
+    width: 100%;
+}
+
+main {
+    background-color: #f4a7b9;
+    flex-grow: 5;
+    width: 100vw;
+    padding: 10px;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+footer {
+    background-color: aquamarine;
+    flex-grow: 2;
+    width: 100%;
+}
+
+
+
+.procontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /*商品間距20px*/
+    justify-content: center;
+
+
+
+    width: 100%;
+}
+
+.product {
+    background-color: #fedfe1;
+
+    flex: 1 1 calc(33.333%-10px);
+    /*減去間距的gap*/
+    /* flex: flex-grow | flex-shrink | flex-basis */
+    box-sizing: border-box;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.243);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* 指定 transition 的屬性為 transform 和 box-shadow (要變化的屬性)，並在 hover 狀態下設置其變化值；
+   使 transition 動畫在這些屬性變化時生效； */
+
+
+}
+
+.product:hover {
+
+    transform: scale(1.05);
+    /*放大1.05倍*/
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.3);
+    /*陰影強化*/
+}
+
+
+
+.product img {
+    width: 300px;
+    height: 250px;
+    background: white;
+    display: block;
+    /* 避免底部空隙 */
+    object-fit: cover;
+    /* 保持比例並填滿容器，維持圖片比例的重點*/
+}
+
+.priceposi {
+    text-align: right;
+    padding-right: 10px;
+}
+
+@media (max-width:768px) {
+    .procontainer{
+        flex-direction: column;
+        align-items: center;
+    }
+     .product{
+        transition: none;
+     }
+     .product:hover{
+        transform: none;
+        box-shadow: none;
+     }
+    .product img{
+        width: 240px;
+        height: 200px;
+        padding: 5px;
+    }
+    #proName{
+        font-size: 1.5rem;
+    }
+   .priceposi{
+        text-align: center;
+        font-size: large;
+    }
+
+
+}

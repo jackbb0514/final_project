@@ -1,0 +1,338 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 標楷體;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-image: url(../img/head.png);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+}
+.all {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    height: 100%;
+}
+.top, .middle, .goods {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1;
+}
+
+.comment, .comsumerin, .shoppingcar, 
+.kuromi, .house, .holi, .kapi, 
+.pc1, .name, .find {
+    margin: 0 10px;
+}
+
+.kuromi, .house, .holi, .kapi,.comment, .comsumerin, .shoppingcar{
+    border: 3px solid rosybrown;
+    width: 25%;
+    border-radius: 10%;
+    
+}
+.pc1 img {
+    height: 175px;
+    border-radius: 50%;
+    border: #f99aaf 4px solid;
+}
+.name img{
+    height:  175px;
+}
+.find input {
+    padding: 5px;
+
+    color: #333;
+}
+.find button {
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+.floating-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f99aaf;
+    border: 4px solid #e0b1cb;
+    padding: 20px;
+    z-index: 9999;
+    border-radius: 5%;
+    height: 500px;
+    width: 400px;
+    display: none;
+}
+
+.floating-window-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: #777;
+}
+
+.input-box input:focus+label,
+.input-box input:valid+label {
+    top: -10px;
+    left: 5px;
+    color: #333;
+    font-size: 12px;
+}
+
+.remeber-forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remeber-forget a {
+    color: blue;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.login-register {
+    text-align: center;
+}
+
+.login-register p {
+    margin-top: 20px;
+    color: #777;
+}
+
+.login-register a {
+    color: blue;
+}
+
+
+
+
+/* 商品列 */
+
+.procontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /*商品間距20px*/
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.product {
+    background-color: #fedfe1;
+
+    flex: 1 1 calc(33.333%-10px);
+    /*減去間距的gap*/
+    /* flex: flex-grow | flex-shrink | flex-basis */
+    box-sizing: border-box;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.243);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* 指定 transition 的屬性為 transform 和 box-shadow (要變化的屬性)，並在 hover 狀態下設置其變化值；
+   使 transition 動畫在這些屬性變化時生效； */
+
+
+}
+
+.product:hover {
+
+    transform: scale(1.05);
+    /*放大1.05倍*/
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.3);
+    /*陰影強化*/
+}
+
+
+
+.product img {
+    width: 300px;
+    height: 250px;
+    background: white;
+    display: block;
+    /* 避免底部空隙 */
+    object-fit: cover;
+    /* 保持比例並填滿容器，維持圖片比例的重點*/
+}
+
+.priceposi {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+/* 關於我們 */
+.container {
+    /* background-color: gainsboro; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1800px;
+    width: 100%;
+    margin: 40px;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.row-center {
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: #f4a7b9;
+    height: 400px;
+    max-height: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+    box-sizing: border-box;
+    transition: transform 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.profile-card:hover {
+    transform: scale(1.1);
+    transition-delay: 0s;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-info {
+    display: none;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.profile-card:hover .profile-info {
+    display: block;
+    opacity: 1;
+}
+
+.profile-card .profile-info {
+    transition-delay: 0.2s;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+
+.border{
+    border: 5px solid #ccc;
+}
+
+
+
+
+/* 手機界面 */
+
+
+@media (max-width:768px) {
+    .procontainer{
+        flex-direction: column;
+        align-items: center;
+    }
+     .product{
+        transition: none;
+     }
+     .product:hover{
+        transform: none;
+        box-shadow: none;
+     }
+    .product img{
+        width: 240px;
+        height: 200px;
+        padding: 5px;
+    }
+    #proName{
+        font-size: 1.5rem;
+    }
+   .priceposi{
+        text-align: center;
+        font-size: large;
+    }
+
+
+}

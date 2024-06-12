@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="../CSS/product.css">
+    <script>
+
+    //控制點擊數量
+    function updateQuantity(change) {
+        var quantityInput = document.getElementById('quantity');
+        var currentQuantity = parseInt(quantityInput.value);
+        var newQuantity = currentQuantity + change;
+            if (newQuantity < 1) {
+                newQuantity = 1;
+            }
+
+        quantityInput.value = newQuantity;
+    }
+
+    // 添加到購物車
+    function addToCart() {
+        var quantity = document.getElementById('quantity').value;
+        alert('已把 ' + quantity + ' 個商品加入購物車');
+    }
+        </script>
+</head>
+<body>
+
+
+<nav>
+    <a href="../index.html">首頁</a>
+    /
+    <a href="../cart.html">購物車</a>
+    /
+    <a href="../purchase_history.html">評論區</a>
+</nav>
+
+
+<main>
+
+<div class="product-container">
+        <div class="product-image">
+            <img src="../img/3.jpg" alt="test">
+        </div>
+
+        <div class="product">
+            <h2>xdd</h2>
+            <p>商品説明</p>
+            
+            <div class="product-name">
+            <p>内容：Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio consequatur ea assumenda veritatis eveniet sequi consequuntur nobis, excepturi quibusdam, vel voluptatum ex illo hic dolore enim esse. Voluptatum, excepturi iusto?</p>
+            <p>商品價格: NT$300</p>
+            </div>
+
+
+            <div class="quantity-selector">
+                <label for="quantity">數量:</label>
+                <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+            </div>
+
+
+            <button type="submit" onclick="addToCart()">加入購物車</button>
+            <a href="../cart.html"><button type="button">直接結帳</button></a>
+            </div>
+
+        </div>
+        </div>
+</div>
+
+
+</main>
+
+
+
+
+
+<footer>
+    <h5>@2024 多媒體 Final Exam</h5>
+</footer>
+
+
+</body>
+</html>

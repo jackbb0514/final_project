@@ -1,0 +1,96 @@
+html,
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #f4a7b9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th {
+    background-color: #f4a7b9;
+}
+.total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+
+
+footer {
+    background-color: #f4a7b9;
+    flex-grow: 2;
+    width: 100%;
+}
+
+.logo {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* 傳送按鈕 */
+
+nav {
+    text-align: center;
+    margin: 1em 0;
+    width: 100%;
+}
+
+nav a {
+    color: #333;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    background-color: #f4a7b9;
+    color: white;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: gainsboro;
+}
+.btn-remove {
+    background-color: #d9534f;
+}
+.btn-remove:hover {
+    background-color: #c9302c;
+}

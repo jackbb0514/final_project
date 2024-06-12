@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #f4a7b9;
+    font-family: '標楷體';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4a7b9;
+}
+.message-form {
+    background: transparent; 
+    text-align: center;
+}
+
+.broad {
+    width: 80%;
+    height: 80%;
+    background-image: url('/img/會員登入.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5%;
+    border: 4px dashed #865a69;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    text-align: center;
+}
+h1{
+    background: transparent; 
+}
+.list{
+    background-color: rgba(244, 167, 185, 0.5);
+    text-align: center;
+}
+form {
+    width: 100%;
+    text-align: center;
+}
+
+input[type="text"], textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #f4a7b9;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c20c8b;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a00a75;
+}
+
+.star-rating {
+    direction: rtl;
+    text-align: center;
+    background: transparent; 
+    margin: 0 auto; /* Add this line to center the element horizontally */
+    width: fit-content; /* Add this line to make the width fit the content */
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating input[type="radio"]:checked ~ label {
+    color: #c20c8bde;
+}
+
+table {
+    width: 80%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c20c8b;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a00a75;
+}
