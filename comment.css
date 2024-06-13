@@ -20,7 +20,7 @@ body {
 .broad {
     width: 80%;
     height: 80%;
-    background-image: url('/img/會員登入.png');
+    background-image: url('../img/會員登入.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
