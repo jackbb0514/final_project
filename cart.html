@@ -106,7 +106,7 @@
             // 添加圖片
             row.innerHTML = `
                 <td><input type="checkbox" onchange="toggleSelection('${item.name}', this.checked)" ${item.selected ? 'checked' : ''}></td>
-                <td><img src="${item.imageUrl}" alt="${item.name}" width="50" height="50"></td>
+                <td><img src="${item.imageUrl}" alt="${item.name}" width="200px" height="200px"></td>
                 <td>${item.description}</td>
                 <td>$${item.price.toFixed(2)}</td>
                 <td>$${item.totalPrice.toFixed(2)}</td>
