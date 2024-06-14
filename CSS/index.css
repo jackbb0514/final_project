@@ -407,13 +407,16 @@ header button:hover {}
 }
 
 .dropdown .dropbtn {
-    background-color: #f4a7b9;
+    width: 100px;
+    height: 33px;
+    background-color: #f9cfd9;
     color: black;
-    padding: 14px 20px;
-    text-decoration: none;
+    font-size: 20px;
+    /* text-decoration: none; */
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 2px solid rebeccapurple;
 }
 
 .dropdown-content {
