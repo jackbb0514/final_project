@@ -6,19 +6,103 @@
     <title>Profile Cards</title>
     <link rel="stylesheet" href="CSS/card.css">
 </head>
-<body>
 
 <header>
-    <nav>
-        <a href="index.html">首頁</a>
-        /
-        <a href="cart.html">購物車</a>
-        /
-        <a href="purchase_history.html">購買記錄</a>
-        /
-        <a href="comment.html">評論區</a>
-    </nav>
+    <div class="all">
+        <div class="top">
+            <div></div>
+            <div class="goods">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="">所有商品</a></button>
+                    <div class="dropdown-content">
+                        <a href="commoditylist/Sanrio.html">所有商品</a>
+                        <a href="commoditylist/Sanrio.html">所有商品</a>
+                        <a href="commoditylist/Sanrio.html">所有商品</a>
+                    </div>
+                </div>
+                <!-- <div class="house"><a href="#item2">間諜過家家</a></div> -->
+            </div>
+
+            <div class="kapi"><button><a href="comment.html">留言板</a></button></div>
+            <div class="kapi"><button><a href="aboutus.html">關於我們</a></button></div>
+
+            <div class="kapi"><button><a href="member_data.html">會員資料</a></button></div>
+
+            <div class="kapi">
+                <button><a href="#" onclick="showFloatingWindow()" id="loginLink" class="link">登入
+               <a id="logoutLink" class="hidden">登出</a></button>
+            </div>
+
+            <a href="cart.html">
+                <div class="kapi">
+                    <div class="shoppingcar">🛒</div>
+                </div>
+            </a>
+        
+        </div>
+        <div class="middle">
+            <div class="pc1"><img src="img/logo.png"></div>
+            <div class="name"><img src="img/name.png"></div>
+        </div>
+    </div>
 </header>
+
+<div id="floatingWindowLogin" class="floating-window" style="display: none;">
+  <div class="floating-window-content" id="loginWindow">
+      <span class="close" onclick="closeFloatingWindow()">&times;</span>
+      <h2>登入</h2>
+      <form action="#">
+
+          
+          <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="remeber-forget">
+              <label><input type="checkbox">記住我的帳密</label>
+
+          </div>
+          <input class="btn" type="submit" value="登入"
+              onclick="location.href='../MainPage Logged in/MainPage.html'">
+          <div class="login-register">
+              <p>沒有帳號?<a href="#" onclick="showRegisterWindow()">註冊</a></p>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Floating window for registration -->
+<div id="floatingWindowRegister" class="floating-window" style="display: none;">
+  <div class="floating-window-content" id="registerWindow">
+      <span class="close" onclick="closeFloatingWindow()">&times;</span>
+      <h2>註冊</h2>
+      <form action="#">
+          <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="確認密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" placeholder="電話" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <input class="btn" type="submit" value="註冊" onclick="registerUser()">
+      </form>
+  </div>
+</div>
+
+<body>
 
 
 
