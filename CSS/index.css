@@ -6,6 +6,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #ffbecd;
 }
 header {
     background-image: url(../img/head.png);
@@ -17,6 +18,7 @@ header {
     justify-content: center;
     padding: 10px;
     text-align: center;
+    border-bottom: 3px solid rosybrown;
 
 }
 .all {
@@ -28,9 +30,17 @@ header {
     font-size: 18px;
     height: 100%;
 }
-.top, .middle, .goods {
+.top,  .goods {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1;
+}
+.middle{
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 10px 0;
@@ -42,30 +52,40 @@ header {
 .pc1, .name, .find {
     margin: 0 10px;
 }
+.holi, .comsumerin,.shoppingcar, .comment, .kapi button{
+    width: 100px;
+    height: auto;
+    border-color: rebeccapurple;
+    background-color: rgb(255, 136, 239);
+    font-size: 20px;
+    border-radius: 10px;
+}
+.shoppingcar{
+    width: 100px;
+    height: auto;
+    border-color: rebeccapurple;
+    background-color: rgb(255, 136, 239);
+    font-size: 20px;
+    border-radius: 50%;
+}
+header button:hover{
 
-.kuromi, .house, .holi, .kapi,.comment, .comsumerin, .shoppingcar{
-    border: 3px solid rosybrown;
-    width: 25%;
-    border-radius: 10%;
-    
 }
 .pc1 img {
     height: 175px;
     border-radius: 50%;
     border: #f99aaf 4px solid;
 }
+.shoppingcar img{
+    margin: 0px;
+    padding: 0px;
+    width: 50px;
+    height: 25px;
+}
 .name img{
     height:  175px;
 }
-.find input {
-    padding: 5px;
 
-    color: #333;
-}
-.find button {
-    padding: 5px 10px;
-    margin-left: 5px;
-}
 .floating-window {
     position: fixed;
     top: 50%;
@@ -236,7 +256,11 @@ header {
     width: 70%;
     position: relative;
     margin: 0px auto;
+    
   }
+  .slideshow-container img{
+  border: 3px dashed rosybrown;
+}
   
   /*按鍵設計*/
   .prev, .next {
