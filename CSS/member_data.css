@@ -15,24 +15,23 @@ footer {
     justify-content: center;
 }
 
+main {
+    background-color: #f4a7b9;
+    width: 100%;
+}
+
 footer {
     background: #ffbecd;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
     flex-shrink: 0;
 }
 
-main {
-    background-color: #f4a7b9;
-    flex-grow: 1;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-}
 
 /* 頁眉樣式 */
+
 header {
     background-image: url(../img/head.png);
     background-size: cover;
@@ -384,15 +383,20 @@ button:active {
     body {
         line-height: 1.8;
     }
+
     .data {
         background-color: #fedfe1;
     }
+
     .tpdc {
         width: 40%;
     }
-    td, input {
+
+    td,
+    input {
         padding: 5px;
     }
+
     button {
         transform: scale(2);
     }
