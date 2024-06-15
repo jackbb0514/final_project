@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布魯托</title>
+    <link rel="stylesheet" href="../CSS/product.css">
+    <link rel="JavaScript" href="../login.js">
+    <link rel="JavaScript" href="prodcomment.js">
+
+</head>
+<header>
+    <div class="all">
+        <div class="top">
+                <div class="dropdown kapi">
+                    <button class="dropbtn"><a href="">所有商品</a></button>
+                    <div class="dropdown-content">
+                        <a href="../commoditylist/Sanrio.html">三麗鷗</a>
+                        <a href="../commoditylist/disney.html">迪士尼</a>
+                        <a href="../commoditylist/pixar.html">皮克斯</a>
+                    </div>
+                </div>
+
+            <div class="kapi"><button><a href="../comment.html">留言板</a></button></div>
+            <div class="kapi"><button><a href="../aboutus.html">關於我們</a></button></div>
+
+            <div class="kapi"><button><a href="../member_data.html">會員資料</a></button></div>
+
+            <div class="kapi">
+                <button><a href="#" onclick="showFloatingWindow()" id="loginLink" class="link">登入
+               <a id="logoutLink" class="hidden">登出</a></button>
+            </div>
+
+            <a href="../cart.html">
+                <div class="kapi">
+                    <div class="shoppingcar">🛒</div>
+                </div>
+            </a>
+        
+        </div>
+        <div class="middle">
+            <div class="pc1"><img src="../img/logo.png"></div>
+            <div class="name"><img src="../img/name.png"></div>
+        </div>
+    </div>
+</header>
+
+<div id="floatingWindowLogin" class="floating-window" style="display: none;">
+  <div class="floating-window-content" id="loginWindow">
+      <span class="close" onclick="closeFloatingWindow()">&times;</span>
+      <h2>登入</h2>
+      <form action="#">
+
+          
+          <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" placeholder="帳號" onfocus="this.style.color='black'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="密碼" onfocus="this.style.color='black'" required>
+          </div>
+          <div class="remeber-forget">
+              <label><input type="checkbox">記住我的帳密</label>
+
+          </div>
+          <input class="btn" type="submit" value="登入"
+              onclick="location.href='../MainPage Logged in/MainPage.html'">
+          <div class="login-register">
+              <p>沒有帳號?<a href="#" onclick="showRegisterWindow()">註冊</a></p>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Floating window for registration -->
+<div id="floatingWindowRegister" class="floating-window" style="display: none;">
+  <div class="floating-window-content" id="registerWindow">
+      <span class="close" onclick="closeFloatingWindow()">&times;</span>
+      <h2>註冊</h2>
+      <form action="#">
+          <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="確認密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" placeholder="電話" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <input class="btn" type="submit" value="註冊" onclick="registerUser()">
+      </form>
+  </div>
+</div>
+
+<body>
+    <main>
+
+        <div class="product-container">
+                <div class="product-image">
+                    <img src="../img/14.jpg">
+                </div>
+
+                    <div class="product">
+                        <h2>布魯托</h2>
+                        <p>商品説明：</p>
+                        <div class="product-name">
+                        <p>冷知識:高飛和布魯托都是狗！</p>
+                        <p>商品價格: NT$800</p>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">數量:</label>
+                        <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                    </div>
+
+
+                    <button type="submit" onclick="addToCart()">加入購物車</button>
+                    <a href="../cart.html"><button type="button">直接結帳</button></a>
+            </div>
+        </div>
+
+
+        <div class="broad">
+            <h1>留言板</h1>
+            <br>
+            <!-- 輸入框 先宣告submit不回傳 再定義各個欄位form內容 -->
+            <form action="" method="post" onsubmit="return false;" class="message-form">  
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1">&#9733;</label>
+                </div>           
+                    <input type="text" id="username" name="username" value="" placeholder="會員姓名" class="list" />
+                    <br>
+                    <textarea name="feedback" id="feedback" rows="8" placeholder="想說甚麼都可以" class="list"></textarea>
+                <input type="submit" value="發送" onclick='processFormData(); addMsg();'>
+            </form>
+            <br>
+            <br>
+            <h1>歷史留言</h1>
+            
+            <table width="800px" align="center" id='Feedback_table'>
+                <tr>
+                    <th width="25%">留言時間</th>
+                    <th width="15%">姓名</th>
+                    <th width="20%">評價</th>
+                    <th width="30%">意見內容</th>
+                </tr>
+
+            </table>
+        </div>
+        
+
+    </main>
+
+
+
+
+
+    <footer>
+        <font style="size:26px;">@2024 多媒體 Final Exam</font>
+    </footer>
+
+
+</body>
+</html>
