@@ -1,4 +1,5 @@
 /* 基本樣式 */
+
 html,
 body {
     margin: 0;
@@ -6,6 +7,8 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
+
+
 }
 
 main,
@@ -336,6 +339,7 @@ a {
 
 h1 {
     text-align: center;
+
 }
 
 table {
@@ -349,6 +353,7 @@ td {
 
 .tpdc {
     text-align: right;
+
 }
 
 input {
@@ -362,19 +367,19 @@ input[type="date"] {
     box-sizing: border-box;
 }
 
-button {
+#savebutton {
     width: 50%;
     background-color: #f4a7b9;
-    border: 0px;
+    border: 2px solid rebeccapurple;
     border-radius: 5px;
-    transform: scale(1.4);
+    transform: scale(1);
 }
 
-button:hover {
+#savebutton:hover {
     background-color: #b57b88;
 }
 
-button:active {
+#savebutton:active {
     background-color: #f4a7b9;
     transform: scale(0.95);
 }
