@@ -8,12 +8,9 @@ body {
 
 main {
     background-color: #f4a7b9;
-    flex-grow: 5;
-    width: 100vw;
     padding: 10px;
     margin: 0 auto;
-    flex-direction: column;
-    flex-wrap: wrap;
+
 
 }
 
@@ -198,8 +195,8 @@ a {
     color: #777;
 }
 
-.input-box input:focus + label,
-.input-box input:valid + label {
+.input-box input:focus+label,
+.input-box input:valid+label {
     top: -10px;
     left: 5px;
     color: #333;
@@ -253,24 +250,115 @@ a {
 
 
 
+/* 留言板 */
+
+.broad {
+    width: 85%;
+    margin: 0px auto;
+    margin-top: 20px;
+
+    border-radius: 9px;
+    border: 4px dashed #865a69;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.broad h1 {
+    margin: 0px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #f4a7b9;
+    box-sizing: border-box;
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    justify-content: center;
+}
+
+
+input[type="submit"] {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c20c8b;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a00a75;
+}
+
+.message-form {
+    background: transparent;
+    text-align: center;
+    width: 80%;
+}
+
+.list {
+    /* background-color: rgba(244, 167, 185, 0.5); */
+    text-align: center;
+}
+
+
+.star-rating {
+    direction: rtl;
+    text-align: center;
+    background: transparent;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 50px;
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating input[type="radio"]:checked~label {
+    color: #c20c8bde;
+}
+
+table {
+    width: 80%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*  */
 
 
 footer {
@@ -284,12 +372,12 @@ footer {
 
 /* 產品 */
 
-h2{
+h2 {
     text-align: center;
     font-size: 40px;
 }
 
-.product-name{
+.product-name {
     font-size: 20px;
     border: 5px solid #9f546f;
     border-radius: 20px;
@@ -373,7 +461,8 @@ h2{
 
 
 
-button[type="submit"], button[type="button"] {
+button[type="submit"],
+button[type="button"] {
     background-color: #e41464;
     color: white;
     padding: 0.5em 1em;
@@ -382,9 +471,10 @@ button[type="submit"], button[type="button"] {
     border: 1px solid #ddd;
 }
 
-button[type="submit"]:hover, button[type="button"]:hover {
+button[type="submit"]:hover,
+button[type="button"]:hover {
     background-color: #e41464;
-    
+
 }
 
 
@@ -407,7 +497,8 @@ button[type="submit"]:hover, button[type="button"]:hover {
         width: 50%;
     }
 
-    button[type="submit"], button[type="button"] {
+    button[type="submit"],
+    button[type="button"] {
         width: 200px;
         margin-top: 0;
     }
