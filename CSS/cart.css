@@ -1,31 +1,44 @@
-html,
-
-
-
-
+*{
+    font-family: 標楷體;
+    font-weight: 2px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+nav{
+    margin: 0px;
+    padding: 0px;
+   
+}
 body {
     font-family: Arial, sans-serif;
-    background-color: gainsboro;
+    background-color: #ffbecd;
     margin: 0;
     padding: 0;
+    
 }
 .container {
     width: 80%;
     margin: 50px auto;
-    background-color: #f4a7b9;
+    background-image: url(../img/list.png);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 3px dashed rosybrown;
 }
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: rgb(68, 52, 52);
 }
 table {
     width: 100%;
     border-collapse: collapse;
+    
 }
 table, th, td {
-    border: 1px solid #ddd;
+    border: 2px solid #e4d4e0;
+    
 }
 th, td {
     padding: 15px;
@@ -80,16 +93,16 @@ nav a:hover {
     cursor: pointer;
     text-decoration: none;
     color: black;
-    background-color: gainsboro;
-    border: none;
+    background-color: rgb(255, 219, 248);
+    border: 2px solid rosybrown;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: gainsboro;
+    background-color: rgb(174, 33, 139);
 }
 .btn-remove {
-    background-color: #d9534f;
+    background-color: #ff908c;
 }
 .btn-remove:hover {
     background-color: #c9302c;
