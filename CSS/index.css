@@ -10,6 +10,9 @@ body {
     background-color: #ffbecd;
 }
 
+main {
+    flex: 1;
+}
 header {
     background-image: url(../img/head.png);
     background-size: cover;
@@ -25,10 +28,18 @@ header {
 
 }
 
+
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+footer {
+    background: #ffbecd;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 a {
@@ -84,7 +95,7 @@ a {
 
 .kapi button {
     width: 110px;
-    height: auto;
+    height: 40px;
     border-color: rebeccapurple;
     background-color: #f9cfd9;
     font-size: 20px;

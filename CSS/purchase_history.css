@@ -16,6 +16,13 @@ footer {
     justify-content: center;
 }
 
+footer {
+    background: #ffbecd;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
 header {
     background-color: gainsboro;
     flex-grow: 1;
@@ -25,11 +32,12 @@ header {
 main {
     background-color: #f4a7b9;
     flex-grow: 5;
-    width: 100%;
+    width: 100vw;
     padding: 10px;
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 table {
@@ -58,14 +66,6 @@ th {
 tbody tr:nth-child(even) {
     background-color: #fedfe1;
 }
-
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(odd){
     background-color: white;
-}
-
-footer {
-    background-color: aquamarine;
-    flex-grow: 2;
-    width: 100%;
-    text-align: center;
 }

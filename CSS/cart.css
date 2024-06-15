@@ -5,17 +5,51 @@
     padding: 0px;
     
 }
-nav{
-    margin: 0px;
-    padding: 0px;
-   
-}
 body {
     font-family: Arial, sans-serif;
     background-color: #ffbecd;
     margin: 0;
     padding: 0;
     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    flex: 1;
 }
 .container {
     width: 80%;
@@ -53,11 +87,11 @@ th {
 }
 
 
-
 footer {
-    background-color: #f4a7b9;
-    flex-grow: 2;
-    width: 100%;
+    background: #ffbecd;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 .logo {
@@ -107,3 +141,33 @@ nav a:hover {
 .btn-remove:hover {
     background-color: #c9302c;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
