@@ -7,26 +7,6 @@
     <link rel="JavaScript" href="../login.js">
     <link rel="JavaScript" href="prodcomment.js">
 
-<script>
-
-    //控制點擊數量
-    function updateQuantity(change) {
-        var quantityInput = document.getElementById('quantity');
-        var currentQuantity = parseInt(quantityInput.value);
-        var newQuantity = currentQuantity + change;
-            if (newQuantity < 1) {
-                newQuantity = 1;
-            }
-
-        quantityInput.value = newQuantity;
-    }
-
-    // 添加到購物車
-    function addToCart() {
-        var quantity = document.getElementById('quantity').value;
-        alert('已把 ' + quantity + ' 個商品加入購物車');
-    }
-        </script>
 </head>
 
 
