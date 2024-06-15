@@ -12,9 +12,20 @@ body {
     height: 100vh;
     background-color: #f4a7b9;
 }
+
+main {
+    flex: 1;
+}
 .message-form {
     background: transparent; 
     text-align: center;
+}
+
+footer {
+    background: #ffbecd;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 .broad {

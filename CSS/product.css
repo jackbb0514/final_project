@@ -14,7 +14,15 @@ main {
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
+    flex: 1;
 
+}
+
+footer {
+    background: #ffbecd;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -59,7 +67,7 @@ a {
 
 .kapi button {
     width: 100px;
-    height: auto;
+    height: 40px;
     border-color: rebeccapurple;
     background-color: #f9cfd9;
     font-size: 20px;
@@ -265,19 +273,6 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-footer {
-    background-color: aquamarine;
-    flex-grow: 2;
-    width: 100%;
-}
 
 
 

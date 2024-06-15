@@ -1,8 +1,10 @@
+/* 基本樣式 */
 html,
 body {
     margin: 0;
     height: 100%;
-
+    display: flex;
+    flex-direction: column;
     line-height: 1.5;
 }
 
@@ -13,55 +15,44 @@ footer {
     justify-content: center;
 }
 
+footer {
+    background: #ffbecd;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
 main {
     background-color: #f4a7b9;
-    flex-grow: 5;
+    flex-grow: 1;
     width: 100vw;
-
     display: flex;
     flex-direction: column;
 }
 
-footer {
-    background-color: aquamarine;
-    flex-grow: 2;
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
+/* 頁眉樣式 */
 header {
     background-image: url(../img/head.png);
     background-size: cover;
     background-position: center;
     height: 330px;
-    /* display: flex; */
-
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     text-align: center;
     border-bottom: 3px solid rosybrown;
-
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* 鏈接樣式 */
 a {
     text-decoration: none;
     color: rgb(64, 48, 48);
 }
 
+/* 容器樣式 */
 .all {
     margin-top: 20px;
     display: flex;
@@ -72,52 +63,50 @@ a {
     height: 100%;
 }
 
-.top {
+/* 佈局樣式 */
+.top,
+.middle {
     display: flex;
-    justify-content: left;
-    align-items: center;
     width: 100%;
     padding: 10px 0;
     line-height: 1;
+}
+
+.top {
+    justify-content: left;
+    align-items: center;
 }
 
 .middle {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 10px 0;
-    line-height: 1;
 }
-
 
 .comsumerin,
 .kuromi,
 .house,
 .pc1,
 .name,
-.find {
+.find,
+.kapi {
     margin: 0 10px;
-
 }
 
 .kapi {
-    margin: 0 10px;
     padding-left: 30px;
 }
 
 .comsumerin,
-
 .kapi button {
     width: 110px;
-    height: auto;
+    height: 40px;
     border: 2px solid rebeccapurple;
     background-color: #f9cfd9;
     font-size: 20px;
     border-radius: 10px;
-
 }
 
+/* 購物車樣式 */
 .shoppingcar {
     width: 50px;
     height: 50px;
@@ -126,9 +115,14 @@ a {
     font-size: 20px;
     border-radius: 50%;
     align-content: center;
-
 }
 
+.shoppingcar img {
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 25px;
+}
 
 .pc1 img {
     height: 175px;
@@ -136,17 +130,11 @@ a {
     border: #f99aaf 4px solid;
 }
 
-.shoppingcar img {
-    margin: 0px;
-    padding: 0px;
-    width: 50px;
-    height: 25px;
-}
-
 .name img {
     height: 175px;
 }
 
+/* 浮動窗口樣式 */
 .floating-window {
     position: fixed;
     top: 50%;
@@ -244,12 +232,9 @@ a {
     color: blue;
 }
 
-
-
-
+/* 其他樣式 */
 .border {
     text-align: center;
-
     border: 5px solid #ccc;
 }
 
@@ -264,18 +249,15 @@ a {
     padding: 10px;
 }
 
-
-
 .divcenter {
     text-align: center;
 }
-
 
 .hidden {
     display: none;
 }
 
-
+/* 下拉選單樣式 */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -320,33 +302,15 @@ a {
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 表單樣式 */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     width: 100%;
+    height: 1000px;
 }
-
 
 .data {
     display: flex;
@@ -363,11 +327,9 @@ a {
     padding: 5px 20px 20px;
     width: 80%;
     max-width: 1200px;
-
     background-color: #fedfe1;
     border-radius: 10px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.036);
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -384,7 +346,6 @@ table {
 
 td {
     padding: 10px;
-
 }
 
 .tpdc {
@@ -400,7 +361,6 @@ input[type="date"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-    /* 確保內邊距不會影響元素總寬度 */
 }
 
 button {
@@ -410,29 +370,30 @@ button {
     border-radius: 5px;
     transform: scale(1.4);
 }
-button:hover{
-    background-color:#b57b88;
+
+button:hover {
+    background-color: #b57b88;
 }
-button:active{
+
+button:active {
     background-color: #f4a7b9;
     transform: scale(0.95);
 }
 
-
-@media (max-width:768px) {
-    body{
+@media (max-width: 768px) {
+    body {
         line-height: 1.8;
     }
-    .data{
+    .data {
         background-color: #fedfe1;
     }
-    .tpdc{
+    .tpdc {
         width: 40%;
     }
-    td,input{
+    td, input {
         padding: 5px;
     }
-    button{
+    button {
         transform: scale(2);
     }
 }
