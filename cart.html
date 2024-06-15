@@ -106,15 +106,15 @@
             // 添加圖片
             row.innerHTML = `
                 <td><input type="checkbox" onchange="toggleSelection('${item.name}', this.checked)" ${item.selected ? 'checked' : ''}></td>
-                <td><img src="${item.imageUrl}" alt="${item.name}" width="200px" height="200px"></td>
+                <td><img src="${item.imageUrl}" alt="${item.name}" width="50" height="50"></td>
                 <td>${item.description}</td>
                 <td>$${item.price.toFixed(2)}</td>
                 <td>$${item.totalPrice.toFixed(2)}</td>
                 <td>
                     <div class="quantity-controls">
-                        <button class="btn btn-quantity" onclick="decreaseQuantity('${item.name}')">-</button>
+                        <button class="btn btn-quantity" onclick="decreaseQuantity('${item.name}')">➖</button>
                         <span>${item.quantity}</span>
-                        <button class="btn btn-quantity" onclick="increaseQuantity('${item.name}')">+</button>
+                        <button class="btn btn-quantity" onclick="increaseQuantity('${item.name}')">➕</button>
                         <button class="btn btn-remove" onclick="removeItem('${item.name}')">刪除</button>
                     </div>
                 </td>
