@@ -25,7 +25,7 @@ header {
 main {
     background-color: #f4a7b9;
     flex-grow: 5;
-    width: 100vw;
+    width: 100%;
     padding: 10px;
     margin: 0 auto;
     flex-direction: column;
@@ -58,7 +58,8 @@ th {
 tbody tr:nth-child(even) {
     background-color: #fedfe1;
 }
-tbody tr:nth-child(odd){
+
+tbody tr:nth-child(odd) {
     background-color: white;
 }
 
@@ -68,4 +69,3 @@ footer {
     width: 100%;
     text-align: center;
 }
-
