@@ -13,6 +13,7 @@ body {
 main {
     flex: 1;
 }
+
 header {
     background-image: url(../img/head.png);
     background-size: cover;
@@ -247,18 +248,12 @@ a {
 
 .product {
     background-color: #fedfe1;
-
-    flex: 1 1 calc(33.333%-10px);
-    /*減去間距的gap*/
-    /* flex: flex-grow | flex-shrink | flex-basis */
     box-sizing: border-box;
     margin-right: 10px;
     text-align: center;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.243);
 
     transition: transform 0.2s, box-shadow 0.2s;
-    /* 指定 transition 的屬性為 transform 和 box-shadow (要變化的屬性)，並在 hover 狀態下設置其變化值；
-   使 transition 動畫在這些屬性變化時生效； */
 
 
 }
