@@ -6,10 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>會員資料</title>
     <link rel="stylesheet" href="CSS/member_data.css" />
+    <link rel="JavaScript" href="login.js">
   </head>
+
+  <header>
+    <div class="all">
+        <div class="top">
+            <div></div>
+            <div class="goods">
+                <div class="dropdown kapi">
+                  <button class="dropbtn"><a href="">所有商品</a></button>
+                  <div class="dropdown-content">
+                      <a href="commoditylist/Sanrio.html">三麗鷗</a>
+                      <a href="commoditylist/disney.html">迪士尼</a>
+                      <a href="commoditylist/pixar.html">皮克斯</a>
+                  </div>
+                </div>
+            </div>
+            <div class="kapi"><button><a href="index.html">主頁</a></button></div>
+            <div class="kapi"><button><a href="comment.html">留言板</a></button></div>
+            <div class="kapi"><button><a href="aboutus.html">關於我們</a></button></div>
+            <div class="kapi"><button><a href="member_data.html">會員資料</a></button></div>
+            <div class="kapi">
+                <button><a href="#" onclick="showFloatingWindow()" id="loginLink" class="link">登入
+               <a id="logoutLink" class="hidden">登出</a></button>
+            </div>
+
+            <a href="cart.html">
+                <div class="kapi">
+                    <div class="shoppingcar">🛒</div>
+                </div>
+            </a>
+        
+        </div>
+        <div class="middle">
+            <div class="pc1"><img src="img/logo.png"></div>
+            <div class="name"><img src="img/name.png"></div>
+        </div>
+    </div>
+</header>
+
+<div id="floatingWindowLogin" class="floating-window" style="display: none;">
+  <div class="floating-window-content" id="loginWindow">
+      <span class="close" onclick="closeFloatingWindow()">&times;</span>
+      <h2>登入</h2>
+      <form action="#">
+
+          
+          <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="remeber-forget">
+              <label><input type="checkbox">記住我的帳密</label>
+
+          </div>
+          <input class="btn" type="submit" value="登入"
+              onclick="location.href='../MainPage Logged in/MainPage.html'">
+          <div class="login-register">
+              <p>沒有帳號?<a href="#" onclick="showRegisterWindow()">註冊</a></p>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Floating window for registration -->
+<div id="floatingWindowRegister" class="floating-window" style="display: none;">
+  <div class="floating-window-content" id="registerWindow">
+      <span class="close" onclick="closeFloatingWindow()">&times;</span>
+      <h2>註冊</h2>
+      <form action="#">
+          <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" placeholder="帳號" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" placeholder="確認密碼" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" placeholder="電話" onfocus="this.style.color='#ffff'" required>
+          </div>
+          <input class="btn" type="submit" value="註冊" onclick="registerUser()">
+      </form>
+  </div>
+</div>
+
+<body>
+
+
+
+
+
+
+  
   <body>
     <div class="container">
-      <header>header</header>
       <main>
         <div class="data">
           <div class="formstyle">
@@ -55,4 +156,73 @@
       <footer>footer</footer>
     </div>
   </body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function showFloatingWindow() {
+        var floatingWindow = document.getElementById("floatingWindowLogin");
+        floatingWindow.style.display = "block";
+    }
+
+    function closeFloatingWindow() {
+        var floatingWindow = document.getElementById("floatingWindowLogin");
+        floatingWindow.style.display = "none";
+    }
+
+    function showRegisterWindow() {
+        var floatingWindow = document.getElementById("floatingWindowRegister");
+        floatingWindow.style.display = "block";
+    }
+
+    function registerUser() {
+        // Hide the login window
+        var loginWindow = document.getElementById("floatingWindowLogin");
+        loginWindow.style.display = "none";
+
+        // Show the registration window
+        var registerWindow = document.getElementById("floatingWindowRegister");
+        registerWindow.style.display = "block";
+    }
+    function clearText(input) {
+    if (input.value === '搜尋') {
+        input.value = '';
+    }
+}
+
+function restoreText(input) {
+    if (input.value === '') {
+        input.value = '搜尋';
+    }
+}
+function search() {
+        var input = document.getElementById("searchInput").value;
+        alert("You searched for: " + input);
+    }
+
+
+
+
+    document.getElementById('loginLink').addEventListener('click', function() {
+        // alert('Logging in...');
+        this.classList.add('hidden');
+        document.getElementById('logoutLink').classList.remove('hidden');
+        
+    });
+
+    document.getElementById('logoutLink').addEventListener('click', function() {
+        alert('已登出');
+        this.classList.add('hidden');
+        document.getElementById('loginLink').classList.remove('hidden');
+        
+    });
+
+  </script>
