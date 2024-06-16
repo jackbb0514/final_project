@@ -55,9 +55,6 @@ function addMsg() {
 }
 
 
-
-    <script>
-
     //控制點擊數量
     function updateQuantity(change) {
         var quantityInput = document.getElementById('quantity');
@@ -75,4 +72,4 @@ function addMsg() {
         var quantity = document.getElementById('quantity').value;
         alert('已把 ' + quantity + ' 個商品加入購物車');
     }
-        </script>
+
