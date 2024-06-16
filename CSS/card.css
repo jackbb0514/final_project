@@ -36,6 +36,7 @@ header {
     text-align: center;
     border-bottom: 3px solid rgb(12, 1, 1);
 }
+
 footer {
     background: #ffbecd;
     color: white;
@@ -210,8 +211,8 @@ a {
     color: #777;
 }
 
-.input-box input:focus + label,
-.input-box input:valid + label {
+.input-box input:focus+label,
+.input-box input:valid+label {
     top: -10px;
     left: 5px;
     color: #333;
@@ -332,7 +333,7 @@ a {
     margin: 0 5px;
 }
 
-button {
+/* button {
     background-color: #D6CCC2;
     color: black;
     font-family: 'Noto Serif TC', serif;
@@ -348,4 +349,4 @@ button {
 button:hover {
     background-color: gray;
     color: white;
-}
+} */
