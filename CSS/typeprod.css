@@ -1,0 +1,357 @@
+/* 保持原有的設置 */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 標楷體;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 1.5;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-image: url(../img/head.png);
+    background-size: cover;
+    background-position: center;
+    height: 330px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid rosybrown;
+}
+
+main {
+    background-color: #f4a7b9;
+    flex: 1;
+    /* 確保 main 占滿剩餘空間 */
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+footer {
+    background: #ffbecd;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(64, 48, 48);
+}
+
+/* 其餘樣式保持不變 */
+.top {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1;
+    /* margin-left: 100px; */
+}
+
+.kapi {
+    margin: 0 10px;
+    padding-left: 30px;
+}
+
+.word {
+    text-align: center;
+    border-radius: 50px;
+    font-size: 40px;
+    border: 2px solid;
+    background-color: #fff;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+.kapi button {
+    width: 100px;
+    height: 40px;
+    border-color: rebeccapurple;
+    background-color: #f9cfd9;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.shoppingcar {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rebeccapurple;
+    background-color: #f9cfd9;
+    font-size: 20px;
+    border-radius: 50%;
+    align-content: center;
+}
+
+.pc1 img {
+    height: 175px;
+    border-radius: 50%;
+    border: #f99aaf 4px solid;
+}
+
+.name img {
+    height: 175px;
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    width: 100px;
+    height: 40px;
+    background-color: #f9cfd9;
+    color: black;
+    font-size: 20px;
+    /* text-decoration: none; */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rebeccapurple;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: gray;
+    color: white;
+}
+
+.all {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    height: 100%;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1;
+}
+
+.floating-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f99aaf;
+    border: 4px solid #e0b1cb;
+    padding: 20px;
+    z-index: 9999;
+    border-radius: 5%;
+    height: 500px;
+    width: 400px;
+    display: none;
+}
+
+.floating-window-content {
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: #777;
+}
+
+.input-box input:focus+label,
+.input-box input:valid+label {
+    top: -10px;
+    left: 5px;
+    color: #333;
+    font-size: 12px;
+}
+
+.remeber-forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remeber-forget a {
+    color: blue;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.login-register {
+    text-align: center;
+}
+
+.login-register p {
+    margin-top: 20px;
+    color: #777;
+}
+
+.login-register a {
+    color: blue;
+}
+
+/* 產品 */
+.procontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.product {
+    background-color: #fedfe1;
+    flex: 1 1 calc(33.333%-10px);
+    /*減去間距的gap*/
+    /* flex: flex-grow | flex-shrink | flex-basis */
+    box-sizing: border-box;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.243);
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* 指定 transition 的屬性為 transform 和 box-shadow (要變化的屬性)，並在 hover 狀態下設置其變化值；
+       使 transition 動畫在這些屬性變化時生效； */
+}
+
+.product:hover {
+    transform: scale(1.05);
+    /*放大1.05倍*/
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.3);
+    /*陰影強化*/
+}
+
+.product img {
+    width: 300px;
+    height: 250px;
+    background: white;
+    display: block;
+    /* 避免底部空隙 */
+    object-fit: cover;
+    /* 保持比例並填滿容器，維持圖片比例的重點*/
+}
+
+.priceposi {
+    text-align: right;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .procontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        transition: none;
+    }
+
+    .product:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .product img {
+        width: 240px;
+        height: 200px;
+        padding: 5px;
+    }
+
+    #proName {
+        font-size: 1.5rem;
+    }
+
+    .priceposi {
+        text-align: center;
+        font-size: large;
+    }
+}
