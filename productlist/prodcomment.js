@@ -1,12 +1,11 @@
-//控制點擊數量
+// 控制點擊數量
 function updateQuantity(change) {
     var quantityInput = document.getElementById('quantity');
     var currentQuantity = parseInt(quantityInput.value);
     var newQuantity = currentQuantity + change;
-        if (newQuantity < 1) {
-            newQuantity = 1;
-        }
-
+    if (newQuantity < 1) {
+        newQuantity = 1;
+    }
     quantityInput.value = newQuantity;
 }
 
@@ -15,6 +14,7 @@ function addToCart() {
     var quantity = document.getElementById('quantity').value;
     alert('已把 ' + quantity + ' 個商品加入購物車');
 }
+
 // 處理表單數據
 function processFormData() {
     const name = document.getElementById('username').value;
@@ -66,5 +66,3 @@ function delRow(button) {
     const row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
 }
-
-
