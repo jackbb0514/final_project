@@ -1,39 +1,51 @@
+/* Reset default padding and margin, set default background and font */
 * {
     padding: 0;
     margin: 0;
-    background-color: #f4a7b9;
-    font-family: '標楷體';
+    font-family: '標楷體', sans-serif;
 }
 
-body {
+/* Set body and html to be full height */
+html, body {
+    height: 100%;
+    background-color: #f4a7b9;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Main content area styling */
+main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4a7b9;
 }
 
-main {
-    flex: 1;
-}
+/* Form styling */
 .message-form {
-    background: transparent; 
+    background: transparent;
     text-align: center;
 }
 
+/* Footer styling */
 footer {
     background: #ffbecd;
     color: white;
     text-align: center;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Board styling */
 .broad {
     width: 80%;
     height: 80%;
-
+    margin: 0 auto;
     background-image: url('../img/會員登入.png');
-    background-size: 145%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 5%;
@@ -47,19 +59,27 @@ footer {
     overflow-y: auto;
     text-align: center;
 }
-h1{
-    background: transparent; 
+
+/* Header styling */
+h1 {
+    background: transparent;
+    margin-bottom: 20px;
 }
-.list{
+
+/* List item styling */
+.list {
     background-color: rgba(244, 167, 185, 0.5);
     text-align: center;
 }
+
+/* Form input styling */
 form {
     width: 100%;
     text-align: center;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
     width: 80%;
     margin: 10px 0;
     padding: 10px;
@@ -68,6 +88,7 @@ input[type="text"], textarea {
     box-sizing: border-box;
 }
 
+/* Submit button styling */
 input[type="submit"] {
     margin: 10px 0;
     padding: 10px 20px;
@@ -83,12 +104,13 @@ input[type="submit"]:hover {
     background-color: #a00a75;
 }
 
+/* Star rating styling */
 .star-rating {
     direction: rtl;
     text-align: center;
-    background: transparent; 
-    margin: 0 auto; /* Add this line to center the element horizontally */
-    width: fit-content; /* Add this line to make the width fit the content */
+    background: transparent;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .star-rating input[type="radio"] {
@@ -106,13 +128,15 @@ input[type="submit"]:hover {
     color: #c20c8bde;
 }
 
+/* Table styling */
 table {
     width: 80%;
     margin: 20px 0;
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
@@ -123,6 +147,7 @@ th {
     color: black;
 }
 
+/* Button styling */
 button {
     padding: 5px 10px;
     border: none;
